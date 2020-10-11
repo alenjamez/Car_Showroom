@@ -13,17 +13,22 @@ h1 {
 			text-shadow: -2px -2px 0 rgba(0, 0, 0, 0.125);
 			text-transform: none;
       margin-left: 0px;
-	  float: left;
+	    float: left;
     }
-
-.maindiv{
-    background-image: url("images/login.jpg");/*linear-gradient(to bottom, var(--maincolor), rgb(49, 39, 189));*/
-    background-repeat:none;
-    background-size:cover;
-    background-position:center;
-    width:100vw;
-    height:100vh;
-    min-height:100%;
+.blackbox{
+  background-color: rgba(0, 0, 0, 0.125);
+  position: fixed;
+  width: 500px;
+  height:400px;
+  padding: 30px 0px 30px 0px;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  box-shadow: rgba(133, 133, 133, 0.603) 10px 10px 10px;
 }
 button:hover {
   opacity: 0.8;
@@ -31,17 +36,8 @@ button:hover {
 
 .loginform{
 		opacity: 1;
+}
 
-}
-.container{
-	opacity: 0.8;
-	padding:3em;
-	background: black;
-	position:fixed;
-	left:50%;
-	top:50%;
-	transform:translate(-50%, -50%)
-}
 .loginform h3{
     display:flex;
 		opacity: 1;
@@ -59,17 +55,17 @@ button:hover {
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </head>
 <body>
-
-
-    <div class="maindiv"><div class="container">
-        <div class="col-md-6 col-sm-12"><form action="login.php" class="loginform form-group" method="post" enctype="multipart/form-data">
-            <h3 class="form-group" style="color:white">LOGIN</h3>
-            <div class="form-group"><input type="text" class="form-control" placeholder="username" id="usr" name="usr"  required ></div>
-            <div class="form-group"><input type="password" class="form-control" placeholder="password" id="psw" name="psw" required></div>
-            <div class="form-group"><input type="checkbox"> Remember me</div>
-            <div class="form-group"><input type="submit" value="LOGIN" class="form-control" name="button"></div>
-            <footer><a href="registration.html">Sign Up now</a></footer>
-        </form></div></div>
-    </div></div>
+  <div class="blackbox">
+    <div class="col-md-6 col-sm-12">
+      <form action="login.php" class="loginform form-group" method="post" enctype="multipart/form-data">
+        <h3 class="form-group" style="color:white">LOGIN</h3>
+        <div class="form-group"><input type="text" class="form-control" placeholder="username" id="usr" name="usr"  required ></div>
+        <div class="form-group"><input type="password" class="form-control" placeholder="password" id="psw" name="psw" required></div>
+        <div class="form-group"><input type="checkbox"> Remember me</div>
+        <div class="form-group"><input type="submit" value="LOGIN" class="form-control" name="button"></div>
+        <footer><a href="registration.html">Sign Up now</a></footer> 
+      </form>
+    </div>
+  <div>
 </body>
 </html>
